@@ -6,4 +6,5 @@
         x:Class="WeatherApp.MainWindow"
         Title="WeatherApp">
     Welcome to Avalonia!
+    <TextBox Text="{Binding FirstName}" />
 </Window>
