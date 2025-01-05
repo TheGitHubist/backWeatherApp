@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,11 +23,6 @@ namespace Translator {
         }
         public Translator() {
             httpClient = new HttpClient();
-        }
-        public void buttonTranslateOnClick(object sender, EventArgs e) {
-            string textToTranslate = textBox1.Text;
-            string sourceLanguage = comboBox1.SelectedItem.ToString();
-            string destinationLanguage = comboBox2.SelectedItem.ToString();
         }
     }
     public class TranslationResponse {
