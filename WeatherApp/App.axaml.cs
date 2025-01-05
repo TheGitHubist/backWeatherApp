@@ -10,7 +10,7 @@ public partial class App : Application
 {
     public async Task InitializeAsync()
     {
-        await Data.getdata();
+        Data.getdata();
         AvaloniaXamlLoader.Load(this);
     }
 
