@@ -21,5 +21,6 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="RestSharp" Version="112.1.0" />
+    <PackageReference Include="Siticone.Desktop.UI" Version="2.1.1" />
   </ItemGroup>
 </Project>
