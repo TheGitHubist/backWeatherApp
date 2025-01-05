@@ -2,7 +2,6 @@ using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Translator {
     public class Translator {
