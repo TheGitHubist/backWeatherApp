@@ -6,6 +6,6 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
-        private int _number1 = 0;
+        InitializeComponent();
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace WeatherApp;
 
@@ -12,7 +13,7 @@ class Data
     public static async Task getdata()
     {
         Console.WriteLine("Weather Data:");
-        string apiKey = "5d48ef08478f4bd2006695864a9e3434";
+        string apiKey = File.ReadAllText("api.config"); 
         string city = "London";
         string url = $"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}";
 
@@ -23,6 +24,7 @@ class Data
             string responseBody = await response.Content.ReadAsStringAsync();
             JObject weatherData = JObject.Parse(responseBody);
 
+            File.WriteAllText("dataresult.json", weatherData.ToString());
             Console.WriteLine("Weather Data:");
             Console.WriteLine(weatherData.ToString());
         }

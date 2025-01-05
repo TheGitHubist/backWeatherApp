@@ -6,11 +6,4 @@
         x:Class="WeatherApp.MainWindow"
         Title="WeatherApp">
     Welcome to Avalonia!
-    <Window.DataContext>
-        <local:MainWindow/>    
-    </Window.DataContext>
-
-    <StackPanel>
-        <TextBox Text="{Binding Number1}" Margin="10"/>
-    </StackPanel>
 </Window>
