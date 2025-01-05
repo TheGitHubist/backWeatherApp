@@ -5,18 +5,19 @@ using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace WeatherApp
 {
-    public class MainWindow   : Window
+    public partial class MainWindow   : Window
     {
         private TextBlock WeatherLabel;
         private TextBlock TemperatureLabel;
         private TextBlock HumidityLabel;
         private Button FetchWeatherButton;
 
-        private static readonly string apiKey = "YOUR_API_KEY";  // Replace with your OpenWeatherMap API key
-        private static readonly string city = "London"; // Change to any city of your choice
+        private static readonly string apiKey = File.ReadAllText("api.config");  
+        private static readonly string city = "London"; 
 
         public MainWindow()
         {
@@ -44,7 +45,7 @@ namespace WeatherApp
 
         private async Task<string> GetWeatherDataAsync(string cityName)
         {
-            string url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric";  // Use metric for Celsius
+            string url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric";  
 
             using (HttpClient client = new HttpClient())
             {
