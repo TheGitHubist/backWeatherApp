@@ -2,12 +2,13 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using System;
+using System.Threading.Tasks;
 
 namespace WeatherApp;
 
 public partial class App : Application
 {
-    public override void Initialize()
+    public async Task InitializeAsync()
     {
         await Data.getdata();
         AvaloniaXamlLoader.Load(this);
