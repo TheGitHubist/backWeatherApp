@@ -9,7 +9,7 @@ public partial class App : Application
 {
     public override void Initialize()
     {
-        Data.getdata();
+        await Data.getdata();
         AvaloniaXamlLoader.Load(this);
     }
 

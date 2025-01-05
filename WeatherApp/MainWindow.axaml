@@ -7,15 +7,9 @@
         Title="WeatherApp">
     Welcome to Avalonia!
         <StackPanel>
-        
-  
-<TextBlock Name="WeatherLabel" FontSize="20" Text="Weather Info" HorizontalAlignment="Center" Margin="10"/>
-        
-       
-<TextBlock Name="TemperatureLabel" FontSize="16" HorizontalAlignment="Center" Margin="10"/>
-        
-     
-<TextBlock Name="HumidityLabel" FontSize="16" HorizontalAlignment="Center" Margin="10"/>
-        <Button Name="FetchWeatherButton" Content="Fetch Weather" HorizontalAlignment="Center" Margin="10" Click="FetchWeatherButton_Click"/>
+            <TextBlock Name="WeatherLabela" FontSize="20" Text="Weather Info" HorizontalAlignment="Center" Margin="10"/>
+            <TextBlock Name="TemperatureLabela" FontSize="16" HorizontalAlignment="Center" Margin="10"/>
+            <TextBlock Name="HumidityLabela" FontSize="16" HorizontalAlignment="Center" Margin="10"/>
+        <Button Name="FetchWeatherButtona" Content="Fetch Weather" HorizontalAlignment="Center" Margin="10" Click="FetchWeatherButton_Click"/>
     </StackPanel>
 </Window>

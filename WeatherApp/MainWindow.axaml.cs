@@ -29,10 +29,10 @@ namespace WeatherApp
         {
             AvaloniaXamlLoader.Load(this);
 
-            WeatherLabel = this.FindControl<TextBlock>("WeatherLabel");
-            TemperatureLabel = this.FindControl<TextBlock>("TemperatureLabel");
-            HumidityLabel = this.FindControl<TextBlock>("HumidityLabel");
-            FetchWeatherButton = this.FindControl<Button>("FetchWeatherButton");
+            WeatherLabel = this.FindControl<TextBlock>("WeatherLabela");
+            TemperatureLabel = this.FindControl<TextBlock>("TemperatureLabela");
+            HumidityLabel = this.FindControl<TextBlock>("HumidityLabela");
+            FetchWeatherButton = this.FindControl<Button>("FetchWeatherButtona");
 
             FetchWeatherButton.Click += FetchWeatherButton_Click;
         }
