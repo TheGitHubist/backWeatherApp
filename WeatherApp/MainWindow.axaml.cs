@@ -29,7 +29,7 @@ namespace WeatherApp
             DataContext = this;
         }
 
-        private async void InitializeComponent()
+        private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
 
@@ -40,7 +40,7 @@ namespace WeatherApp
             HumidityLabel = this.FindControl<TextBlock>("HumidityLabela");
             FetchWeatherButton = this.FindControl<Button>("FetchWeatherButtona");
 
-            FetchWeatherButton.Click += await FetchWeatherButton_Click;
+            FetchWeatherButton.Click += FetchWeatherButton_Click;
         }
 
         private async void FetchWeatherButton_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
