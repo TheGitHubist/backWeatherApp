@@ -16,6 +16,10 @@ namespace WeatherApp
         private TextBlock HumidityLabel;
         private Button FetchWeatherButton;
 
+        private TextBlock CityName;
+
+        private TextBlock Lat_long;
+
         private static readonly string apiKey = File.ReadAllText("api.config");  
         private static readonly string city = "London"; 
 
@@ -29,6 +33,8 @@ namespace WeatherApp
         {
             AvaloniaXamlLoader.Load(this);
 
+            Lat_long = this.FindControl<TextBlock>("Lat_longa");
+            CityName = this.FindControl<TextBlock>("CityNamea");
             WeatherLabel = this.FindControl<TextBlock>("WeatherLabela");
             TemperatureLabel = this.FindControl<TextBlock>("TemperatureLabela");
             HumidityLabel = this.FindControl<TextBlock>("HumidityLabela");
@@ -61,7 +67,9 @@ namespace WeatherApp
             string temperature = weatherData.main.temp;
             string humidity = weatherData.main.humidity;
             string description = weatherData.weather[0].description;
-
+            string latitude_logitude = weatherData;
+            CityName.Text = $"city : {city}";
+            Lat_long.Text = $"lat/long : {latitude_logitude}";
             WeatherLabel.Text = $"Weather: {description}";
             TemperatureLabel.Text = $"Temperature: {temperature}°C";
             HumidityLabel.Text = $"Humidity: {humidity}%";
