@@ -40,15 +40,14 @@ namespace WeatherApp
             WeatherLabel = this.FindControl<TextBlock>("WeatherLabela");
             TemperatureLabel = this.FindControl<TextBlock>("TemperatureLabela");
             HumidityLabel = this.FindControl<TextBlock>("HumidityLabela");
-            FetchWeatherButton = this.FindControl<Button>("FetchWeatherButtona");
-
-            FetchWeatherButton.Click += Button_Click;
         }
 
-        private async void Button_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs args)
         {   
-            string citynfo = InputTextBox.Text;
-            File.WriteAllText("kjbv.txt", citynfo);
+            Debug.WriteLine($"enorgbkr");
+            Debug.WriteLine($"{Input.Text}");
+            //string citynfo = $"{Input.Text}";
+            //File.WriteAllText("kjbv.txt", citynfo);
             //string weatherInfo = await GetWeatherDataAsync(citynfo);
             //DisplayWeather(weatherInfo);
         }
