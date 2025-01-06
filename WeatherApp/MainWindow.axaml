@@ -5,7 +5,6 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="WeatherApp.MainWindow"
         Title="WeatherApp">
-    Welcome to Avalonia!
         <StackPanel>
             <TextBlock Name="WeatherLabela" FontSize="20" Text="Weather Info" HorizontalAlignment="Center" Margin="10"/>
             <TextBlock Name="TemperatureLabela" FontSize="16" HorizontalAlignment="Center" Margin="10"/>
