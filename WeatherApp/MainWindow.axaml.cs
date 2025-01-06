@@ -6,6 +6,8 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.IO;
+using Avalonia.Interactivity;
+using System.Diagnostics;
 
 namespace WeatherApp
 {
@@ -40,15 +42,15 @@ namespace WeatherApp
             HumidityLabel = this.FindControl<TextBlock>("HumidityLabela");
             FetchWeatherButton = this.FindControl<Button>("FetchWeatherButtona");
 
-            FetchWeatherButton.Click += FetchWeatherButton_Click;
+            FetchWeatherButton.Click += Button_Click;
         }
 
-        private async void FetchWeatherButton_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private async void Button_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
         {   
             string citynfo = InputTextBox.Text;
             File.WriteAllText("kjbv.txt", citynfo);
-            string weatherInfo = await GetWeatherDataAsync(citynfo);
-            DisplayWeather(weatherInfo);
+            //string weatherInfo = await GetWeatherDataAsync(citynfo);
+            //DisplayWeather(weatherInfo);
         }
 
         private async Task<string> GetWeatherDataAsync(string cityName)
