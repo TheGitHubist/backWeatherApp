@@ -44,8 +44,8 @@ namespace WeatherApp
 
         private void Button_Click(object sender, RoutedEventArgs args)
         {   
-            Debug.WriteLine($"enorgbkr");
-            Debug.WriteLine($"{Input.Text}");
+            Debug.WriteLine("enorgbkr");
+            //Debug.WriteLine($"{Input.Text}");
             //string citynfo = $"{Input.Text}";
             //File.WriteAllText("kjbv.txt", citynfo);
             //string weatherInfo = await GetWeatherDataAsync(citynfo);
