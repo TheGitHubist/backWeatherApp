@@ -16,14 +16,17 @@ namespace WeatherApp
         private TextBlock WeatherLabel;
         private TextBlock TemperatureLabel;
         private TextBlock HumidityLabel;
+
+        private TextBlock TaZonzSeTex;
         private Button FetchWeatherButton;
 
         private TextBlock CityName;
 
         private TextBlock Lat_long;
 
-        private static readonly string apiKey = File.ReadAllText("api.config");  
-        private static readonly string city = "London"; 
+        private TextBox cs;
+
+        private static readonly string apiKey = File.ReadAllText("api.config");   
 
         public MainWindow()
         {
@@ -40,16 +43,15 @@ namespace WeatherApp
             WeatherLabel = this.FindControl<TextBlock>("WeatherLabela");
             TemperatureLabel = this.FindControl<TextBlock>("TemperatureLabela");
             HumidityLabel = this.FindControl<TextBlock>("HumidityLabela");
+            TaZonzSeTex = this.FindControl<TextBlock>("TaZonzSeTexa");
+            cs = this.FindControl<TextBox>("csa");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs args)
+        private async void Button_Click(object sender, RoutedEventArgs args)
         {   
-            Debug.WriteLine("enorgbkr");
-            //Debug.WriteLine($"{Input.Text}");
-            //string citynfo = $"{Input.Text}";
-            //File.WriteAllText("kjbv.txt", citynfo);
-            //string weatherInfo = await GetWeatherDataAsync(citynfo);
-            //DisplayWeather(weatherInfo);
+            var citynfo = cs.Text;
+            string weatherInfo = await GetWeatherDataAsync(citynfo);
+            DisplayWeather(weatherInfo, citynfo);
         }
 
         private async Task<string> GetWeatherDataAsync(string cityName)
@@ -63,7 +65,7 @@ namespace WeatherApp
             }
         }
 
-        private void DisplayWeather(string data)
+        private void DisplayWeather(string data, string city)
         {
             dynamic weatherData = JsonConvert.DeserializeObject(data);
             string temperature = weatherData.main.temp;
@@ -76,6 +78,7 @@ namespace WeatherApp
             WeatherLabel.Text = $"Weather: {description}";
             TemperatureLabel.Text = $"Temperature: {temperature}°C";
             HumidityLabel.Text = $"Humidity: {humidity}%";
+            
         }
     }
 }

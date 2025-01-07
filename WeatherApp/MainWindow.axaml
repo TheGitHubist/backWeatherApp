@@ -11,7 +11,8 @@
             <TextBlock Name="HumidityLabela" FontSize="16" HorizontalAlignment="Center" Margin="10"/>
             <TextBlock Name="CityNamea" FontSize="16" HorizontalAlignment="Center" Margin="10"/>
             <TextBlock Name="Lat_longa" FontSize="16" HorizontalAlignment="Center" Margin="10"/>
-            <TextBox Name="Input" Width="200" Margin="10"/>
+            <TextBox Name="csa" Width="200" Margin="10"/>
         <Button Content="Fetch Weather" HorizontalAlignment="Center" Margin="10" Click="Button_Click"/>
+        <TextBlock Name="TaZonzSeTexa" FontSize="16"  Margin="110"/>
     </StackPanel>
 </Window>
