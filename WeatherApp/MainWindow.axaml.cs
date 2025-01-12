@@ -235,11 +235,35 @@ namespace WeatherApp
 
                 var textBlock = new TextBlock
                 {
-                    Text = $"{date}: Avg Temp: {avgTemp:F1}°C, Min Temp: {minTemp:F1}°C, Max Temp: {maxTemp:F1}°C, {description}",
+                    Text = $"{date}",
+                    Margin = new Thickness(10, 0, 0, 0)
+                };
+                var textBlock1 = new TextBlock
+                {
+                    Text = $"Avg Temp: {avgTemp:F1}°C",
+                    Margin = new Thickness(10, 0, 0, 0)
+                };
+                var textBlock2 = new TextBlock
+                {
+                    Text = $"Min Temp: {minTemp:F1}°C",
+                    Margin = new Thickness(10, 0, 0, 0)
+                };
+                var textBlock3 = new TextBlock
+                {
+                    Text = $"Max Temp: {maxTemp:F1}°C",
+                    Margin = new Thickness(10, 0, 0, 0)
+                };
+                var textBlock4 = new TextBlock
+                {
+                    Text = $"{description}",
                     Margin = new Thickness(10, 0, 0, 0)
                 };
 
                 forecastStackPanel.Children.Add(textBlock);
+                forecastStackPanel.Children.Add(textBlock1);
+                forecastStackPanel.Children.Add(textBlock2);
+                forecastStackPanel.Children.Add(textBlock3);
+                forecastStackPanel.Children.Add(textBlock4);
 
                 ForecastPanel.Children.Add(forecastStackPanel);
             }
