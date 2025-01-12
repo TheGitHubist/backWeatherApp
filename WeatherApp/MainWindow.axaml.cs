@@ -236,7 +236,7 @@ namespace WeatherApp
                 var textBlock = new TextBlock
                 {
                     Text = $"{date}",
-                    Margin = new Thickness(10, 0, 0, 0)
+                    Margin = new Thickness(0, 0, 0, 0)
                 };
                 var textBlock1 = new TextBlock
                 {

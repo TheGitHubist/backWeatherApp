@@ -20,11 +20,11 @@
             <StackPanel x:Name="paraa" Orientation="Vertical" Margin="10"/>
 
             <StackPanel Margin="0,0,0,20" HorizontalAlignment="Center">
-                <TextBlock Name="CityNamea" FontSize="30" FontWeight="Bold" Margin="20,0,0,0" />
+                <TextBlock Name="CityNamea" FontSize="30" FontWeight="Bold" Margin="20,0,20,0" />
 
                 <StackPanel Orientation="Horizontal" Margin="10">
                     <Image Name="WeatherIcona" Width="100" Height="100" Margin="10" />
-                    <StackPanel Margin="0,10,0,10">
+                    <StackPanel Margin="0,0,0,10">
                         <TextBlock Name="WeatherLabela" FontSize="24" FontWeight="Bold" />
                         <TextBlock Name="TemperatureLabela" FontSize="20" />
                         <TextBlock Name="HumidityLabela" FontSize="20" />
