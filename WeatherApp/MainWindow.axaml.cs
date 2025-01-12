@@ -241,17 +241,17 @@ namespace WeatherApp
                 var textBlock1 = new TextBlock
                 {
                     Text = $"Avg Temp: {avgTemp:F1}°C",
-                    Margin = new Thickness(10, 0, 0, 0)
+                    Margin = new Thickness(10, 0, 10, 0)
                 };
                 var textBlock2 = new TextBlock
                 {
                     Text = $"Min Temp: {minTemp:F1}°C",
-                    Margin = new Thickness(10, 0, 0, 0)
+                    Margin = new Thickness(10, 0, 10, 0)
                 };
                 var textBlock3 = new TextBlock
                 {
                     Text = $"Max Temp: {maxTemp:F1}°C",
-                    Margin = new Thickness(10, 0, 0, 0)
+                    Margin = new Thickness(10, 0, 10, 0)
                 };
                 var textBlock4 = new TextBlock
                 {
