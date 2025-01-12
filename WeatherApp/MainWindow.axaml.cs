@@ -213,7 +213,7 @@ namespace WeatherApp
                                               .OrderByDescending(g => g.Count())
                                               .First().Key;
 
-                var forecastStackPanel = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(10) };
+                var forecastStackPanel = new StackPanel { Orientation = Orientation.Vertical, Margin = new Thickness(10) };
                 string iconName = GetIconName(description);
                 string iconPath = $"C:/Users/axelp/Desktop/School/CS/backWeatherApp/WeatherApp/img/{iconName}.png";
                 var weatherIcon = new Image
