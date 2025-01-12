@@ -12,7 +12,6 @@
 
 			<!-- Search Bar and Parameter Button -->
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
-				<TextBox Name="CityInput" Width="200" PlaceholderText="Enter city name" />
 				<Button Name="csa" Content="Fetch Weather" Margin="10,0,0,0" Click="Button_Click" />
 				<Button Name="paraa" Click="paramter" Margin="10,0,0,0">
 					<StackPanel Orientation="Horizontal" Name="parameterButtonContainer">
