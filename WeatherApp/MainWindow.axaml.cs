@@ -213,13 +213,13 @@ namespace WeatherApp
                                               .OrderByDescending(g => g.Count())
                                               .First().Key;
 
-                var forecastStackPanel = new StackPanel { Orientation = Orientation.Vertical, Margin = new Thickness(10) };
+                var forecastStackPanel = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(10) };
                 string iconName = GetIconName(description);
                 string iconPath = $"C:/Users/axelp/Desktop/School/CS/backWeatherApp/WeatherApp/img/{iconName}.png";
                 var weatherIcon = new Image
                 {
-                    Width = 10,
-                    Height = 10
+                    Width = 15,
+                    Height = 15
                 };
 
                 if (File.Exists(iconPath))
@@ -236,7 +236,7 @@ namespace WeatherApp
                 var textBlock = new TextBlock
                 {
                     Text = $"{date}",
-                    Margin = new Thickness(0, 0, 0, 0)
+                    Margin = new Thickness(10, 0, 0, 0)
                 };
                 var textBlock1 = new TextBlock
                 {
@@ -277,8 +277,9 @@ namespace WeatherApp
                 "few clouds" => "partly_cloudy",
                 "scattered clouds" => "cloudy",
                 "broken clouds" => "cloudy",
+                "overcast clouds" => "cloudy",
                 "shower rain" => "rainy",
-                "rain" => "rainy",
+                "rain" => "rainy2",
                 "thunderstorm" => "stormy",
                 "snow" => "snowy",
                 "mist" => "mist",
