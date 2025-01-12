@@ -18,7 +18,6 @@ namespace WeatherApp
         private TextBlock WeatherLabel;
         private TextBlock TemperatureLabel;
         private TextBlock HumidityLabel;
-        private TextBlock TaZonzSeTex;
         private TextBlock CityName;
         private TextBlock Lat_long;
         private TextBox cs;
@@ -47,7 +46,6 @@ namespace WeatherApp
             WeatherLabel = this.FindControl<TextBlock>("WeatherLabela");
             TemperatureLabel = this.FindControl<TextBlock>("TemperatureLabela");
             HumidityLabel = this.FindControl<TextBlock>("HumidityLabela");
-            TaZonzSeTex = this.FindControl<TextBlock>("TaZonzSeTexa");
             cs = this.FindControl<TextBox>("csa");
             ForecastPanel = this.FindControl<StackPanel>("ForecastPanela");
             para = this.FindControl<StackPanel>("paraa");

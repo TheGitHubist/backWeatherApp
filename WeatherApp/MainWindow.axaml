@@ -1,3 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        x:Class="WeatherApp.MainWindow"
+        Title="Weather App"
+        Width="800" Height="600">
+    <Window.Background>
+        <ImageBrush Source="C:/Users/axelp/Desktop/School/CS/backWeatherApp/WeatherApp/img/background.png"/>
+    </Window.Background>
+    <DockPanel>
+        <StackPanel Orientation="Vertical" 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="10">
+            <TextBlock x:Name="CityNamea" FontSize="24" Margin="10" Foreground="White"/>
+            <TextBlock x:Name="Lat_longa" FontSize="16" Margin="10" Foreground="White"/>
+            <TextBlock x:Name="WeatherLabela" FontSize="16" Margin="10" Foreground="White"/>
+            <TextBlock x:Name="TemperatureLabela" FontSize="16" Margin="10" Foreground="White"/>
+            <TextBlock x:Name="HumidityLabela" FontSize="16" Margin="10" Foreground="White"/>
+            <TextBox x:Name="csa" Width="200" Margin="10"/>
+            <Button Content="Get Weather" Click="Button_Click" Margin="10"/>
+            <StackPanel x:Name="ForecastPanela" Orientation="Vertical" Margin="10"/>
+            <StackPanel x:Name="paraa" Orientation="Vertical" Margin="10"/>
+            <Image x:Name="WeatherIcona" Width="100" Height="100" Margin="10"/>
+        </StackPanel>
+    </DockPanel>
+</Window>
+
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="WeatherApp.MainWindow"
@@ -37,7 +64,6 @@
 			</StackPanel>
 
 			<!-- Forecast Section -->
-			<TextBlock Text="Forecast" FontSize="24" FontWeight="Bold" Margin="10" />
 			<StackPanel Name="ForecastPanela" Margin="10" />
 		</StackPanel>
 	</Grid>
