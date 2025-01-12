@@ -1,28 +1,45 @@
-<Window xmlns="https://github.com/avaloniaui" 
+<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="WeatherApp.MainWindow"
         Title="Weather App" Width="1500" Height="800">
-    <Window.Background>
-        <ImageBrush Source="C:\Users\axelp\Desktop\School\CS\backWeatherApp\WeatherApp\img\bg.png" />
-    </Window.Background>
-    <Grid>
-        <StackPanel>
-            <TextBlock Name="CityNamea" Margin="10" FontSize="20" />
-            <TextBlock Name="Lat_longa" Margin="10" FontSize="16" />
-            <TextBlock Name="WeatherLabela" Margin="10" FontSize="16" />
-            <TextBlock Name="TemperatureLabela" Margin="10" FontSize="16" />
-            <TextBlock Name="HumidityLabela" Margin="10" FontSize="16" />
-            <Image Name="WeatherIcona" Margin="10" Width="100" Height="100" />
-            <TextBox Name="csa" Margin="10" Width="200" />
-            <Button Name="fetchWeatherButton" Content="Fetch Weather" Margin="10" Click="Button_Click" />
-            <StackPanel Name="ForecastPanela" Margin="10" />
-            <Button Name="parameterButton" Click="paramter">
-                <StackPanel Orientation="Horizontal" Name="parameterButtonContainer">
-                    <Image Source="C:\Users\axelp\Desktop\School\CS\backWeatherApp\WeatherApp\img\adjustment.png" Width="24" Height="24"/>
-                    <TextBlock Text="Parameters"/>
-                </StackPanel>
-            </Button>
-            <StackPanel Name="paraa" Margin="10" />
-        </StackPanel>
-    </Grid>
+	<Window.Background>
+		<ImageBrush Source="C:\Users\axelp\Desktop\School\CS\backWeatherApp\WeatherApp\img\bg.png" />
+	</Window.Background>
+	<Grid>
+		<StackPanel Margin="20" HorizontalAlignment="Center">
+			<!-- App Title -->
+			<TextBlock Text="Weather App" FontSize="36" FontWeight="Bold" Margin="0,20,0,10" HorizontalAlignment="Center" />
+
+			<!-- Search Bar and Parameter Button -->
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+				<TextBox Name="CityInput" Width="200" PlaceholderText="Enter city name" />
+				<Button Name="csa" Content="Fetch Weather" Margin="10,0,0,0" Click="Button_Click" />
+				<Button Name="paraa" Click="paramter" Margin="10,0,0,0">
+					<StackPanel Orientation="Horizontal" Name="parameterButtonContainer">
+						<Image Source="C:\Users\axelp\Desktop\School\CS\backWeatherApp\WeatherApp\img\adjustment.png" Width="24" Height="24"/>
+						<TextBlock Text="Parameters" Margin="5,0,0,0"/>
+					</StackPanel>
+				</Button>
+			</StackPanel>
+
+			<!-- Basic Weather Information -->
+			<StackPanel Margin="0,0,0,20" HorizontalAlignment="Center">
+				<TextBlock Name="CityNamea" FontSize="30" FontWeight="Bold" />
+				<TextBlock Name="Lat_longa" FontSize="16" />
+
+				<StackPanel Orientation="Horizontal" Margin="10">
+					<Image Name="WeatherIcona" Width="100" Height="100" />
+					<StackPanel Margin="10">
+						<TextBlock Name="WeatherLabela" FontSize="24" FontWeight="Bold" />
+						<TextBlock Name="TemperatureLabela" FontSize="20" />
+						<TextBlock Name="HumidityLabela" FontSize="20" />
+					</StackPanel>
+				</StackPanel>
+			</StackPanel>
+
+			<!-- Forecast Section -->
+			<TextBlock Text="Forecast" FontSize="24" FontWeight="Bold" Margin="10" />
+			<StackPanel Name="ForecastPanela" Margin="10" />
+		</StackPanel>
+	</Grid>
 </Window>
