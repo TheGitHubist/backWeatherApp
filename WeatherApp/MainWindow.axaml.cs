@@ -241,7 +241,7 @@ namespace WeatherApp
                 var textBlock1 = new TextBlock
                 {
                     Text = $"Avg Temp: {avgTemp:F1}°C",
-                    Margin = new Thickness(10, 0, 0, 0)
+                    Margin = new Thickness(-10, 0, 50, 0)
                 };
                 var textBlock2 = new TextBlock
                 {
